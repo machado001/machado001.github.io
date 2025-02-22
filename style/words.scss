@@ -1,0 +1,249 @@
+// Variables
+$primary-color: #0095ff;
+$secondary-color: #f5f5f5;
+$text-color: #333;
+$spacing-unit: 1rem;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button-base {
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 275px;
+}
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  background: white;
+}
+
+main {
+    @include flex-center;
+    height: calc(100vh - 5rem);
+}
+
+// Main content
+.hero {
+  max-width: 1200px;
+  padding: $spacing-unit * 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    h1 {
+      font-size: 3rem;
+      margin-bottom: $spacing-unit;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      margin-bottom: $spacing-unit * 2;
+      color: lighten($text-color, 20%);
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .cta-buttons {
+            display: flex;
+            gap: $spacing-unit;
+            margin-bottom: $spacing-unit * 2;
+      
+            .button {
+              @include button-base;
+      
+              img {
+                  width: 24px;
+                  filter: invert(1);
+              }
+              &.primary {
+                background: $primary-color;
+                color: white;
+      
+                &:hover {
+                  background: darken($primary-color, 10%);
+                }
+              }
+      
+              &.secondary {
+                background: $secondary-color;
+                color: $text-color;
+      
+                &:hover {
+                  background: darken($secondary-color, 10%);
+                }
+              }
+            }
+          }
+      
+          .qr-code {
+            img {
+              border: 7px solid #121318;
+              border-radius: 30px;
+              width: 275px;
+              height: 275px;
+            }
+          }
+    }
+
+
+  }
+
+  .showcase {
+    max-width: 650px;
+    .phones-container {
+      display: flex;
+      gap: -100px;
+      transform: perspective(100px) ;
+
+      .phone {
+        width: 200px;
+        height: auto;
+        border-radius: 30px;
+        box-shadow: 0 60px 100px rgba(0, 0, 0, .20);
+
+        &:nth-child(1) {
+            scale: .9;
+            transform: perspective(1000px) rotateY(-20deg);
+            translate: 200px;
+        }
+
+        &:nth-child(2) {
+            scale: 1;
+            transform: perspective(1000px) rotateY(-20deg);
+            translate: 80px;
+        }
+
+        &:nth-child(3) {
+            scale: 1.1;
+        }
+
+        &:nth-child(4) {
+            z-index: -1;
+            scale: 1;
+            transform: perspective(1000px) rotateY(20deg);
+            translate: -80px;
+        }
+
+        &:nth-child(5) {
+            z-index: -2;
+            scale: .9;
+            transform: perspective(1000px) rotateY(20deg);
+            translate: -200px;
+        }
+
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+height: 4rem;
+  text-align: center;
+  .links {
+    margin-bottom: $spacing-unit;
+    
+    a {
+      color: $text-color;
+      text-decoration: none;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    
+    span {
+      margin: 0 $spacing-unit;
+      color: lighten($text-color, 40%);
+    }
+  }
+  
+  .copyright {
+    color: lighten($text-color, 40%);
+    font-size: 0.9rem;
+  }
+}
+
+// Responsive design
+@media (max-width: 1024px) {
+  .hero {
+    text-align: center;
+    
+    .content {
+      order: 1;
+      
+      .cta-buttons {
+        justify-content: center;
+      }
+      
+
+    }
+    
+    .showcase {
+      order: 0;
+      margin-bottom: $spacing-unit * 2;
+      
+      .phones-container {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: $spacing-unit * 2;
+    
+    .content {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .tagline {
+        font-size: 1.2rem;
+      }
+    }
+    
+    .showcase .phones-container {
+      .phone {
+        width: 220px;
+        
+        &:not(:nth-child(3)) {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+}
