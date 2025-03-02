@@ -1,4 +1,0 @@
-OWNERDOMAIN=machado001.com
-
-#Words
-google.com, pub-7172744071623937, DIRECT, f08c47fec0942fa0
