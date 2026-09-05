@@ -37,13 +37,15 @@
 
 <div class="container">
     <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> September 2, 2026</p>
+    <p><strong>Effective Date:</strong> September 5, 2026</p>
 
     <p>
         Thank you for using <strong>Watch Identifier</strong>. We respect your privacy and are committed to
         protecting it. This Privacy Policy explains what information Watch Identifier and the third-party
         services it relies on collect, and how that information is used. The app does not require you to
-        create an account.
+        create an account. Watch Identifier is offered to users of <strong>all ages, including children
+        under 5</strong>, so Section 8 below sets out the additional rules we apply to everyone's data
+        for that reason.
     </p>
 
     <h2>1. The Photo You Scan</h2>
@@ -62,6 +64,15 @@
         details are stored locally in the app's database on your device only. They are never uploaded
         anywhere as part of that save, and you can delete any collection item, or the whole collection, from
         within the app at any time.
+    </p>
+    <p>
+        Each scan request also carries two anonymous identifiers &mdash; a one-way SHA-256 hash of your
+        device's Android ID, and the anonymous app-user id our billing provider generates &mdash; and your
+        IP address, which the relay necessarily sees as part of the connection. The relay uses them for
+        three things only: counting how many free scans a device has already used, checking whether a Pro
+        subscription is active, and blocking automated abuse. They are not a name, an email address or an
+        account, they are never combined with an advertising identifier, and they are not used to build a
+        profile of you or to send you anything.
     </p>
 
     <h2>2. Permissions</h2>
@@ -139,6 +150,16 @@
         requires opt-in consent for non-essential analytics (e.g. under ePrivacy rules), we will provide a
         consent mechanism before those services activate.
     </p>
+    <p>
+        <strong>Children.</strong> Where a user is below the age of digital consent in their country, we do
+        not rely on legitimate interests to profile them, to market to them, or to show them advertising
+        &mdash; none of which the App does for any user, of any age. For those users the device-level
+        analytics and crash reporting described above are relied on only to the extent necessary to keep the
+        App working, to keep it secure, and to fix bugs. Where local law requires consent from a holder of
+        parental responsibility before non-essential analytics may run, that consent mechanism applies
+        before those services activate, and a parent or guardian may contact us at any time to have their
+        child's data deleted (see Sections 7 and 8).
+    </p>
 
     <h2>5. International Data Transfers</h2>
     <p>
@@ -155,6 +176,9 @@
         <li><strong>Your scanned photos:</strong> not retained by our relay or by us at all; a copy exists
             only on your device, and only for results you chose to save to your Collection, until you
             delete them;</li>
+        <li><strong>Free-scan and abuse counters:</strong> the counter keyed to the hashed device id
+            and anonymous app-user id is kept only for as long as it takes to enforce the free-scan quota
+            for that device; the IP-based abuse counter expires automatically after 24 hours;</li>
         <li><strong>Firebase Analytics:</strong> event and user-level data is retained for 14 months from
             collection, matching Firebase's default retention setting;</li>
         <li><strong>Firebase Crashlytics:</strong> crash reports are retained for 90 days;</li>
@@ -197,6 +221,16 @@
             processed on that basis;</li>
         <li>Lodge a complaint with the Autoridade Nacional de Proteção de Dados (ANPD).</li>
     </ul>
+    <p><strong>If you are a parent or guardian, you have the right to:</strong></p>
+    <ul>
+        <li>Review what information has been collected from your child through the App;</li>
+        <li>Refuse to permit any further collection of that information;</li>
+        <li>Request that the information already collected be deleted.</li>
+    </ul>
+    <p>
+        Write to us at the email in Section 11 and we will act on the request. Uninstalling the App also
+        stops any further collection, and deletes the Collection stored on the device.
+    </p>
     <p>
         <strong>We do not sell or share personal information</strong> for cross-context behavioral
         advertising, so there is no "opt-out of sale/share" to exercise.
@@ -212,11 +246,51 @@
 
     <h2>8. Children's Privacy</h2>
     <p>
-        Watch Identifier is a general-audience app, not directed at children, and we do not knowingly
-        collect personal information from children under 13 (or the minimum age of digital consent in your
-        country, where higher). Our Google Play Data Safety declaration reflects this. If we learn that a
-        child has provided us with personal information through Firebase Analytics or Crashlytics, we will
-        take steps to delete it; contact us at the email below if you believe this has occurred.
+        Watch Identifier is offered to users of <strong>all ages, including children under 5</strong>. It is not
+        restricted to adults, so we keep what it collects from any user to the minimum and apply the
+        following rules to <em>everyone</em>, whatever their age:
+    </p>
+    <ul>
+        <li>
+            <strong>No personal details, ever.</strong> There is no account, no sign-up and no field
+            anywhere in the App for a name, an email address, a phone number, an age or any other contact
+            detail. We never ask a child &mdash; or anyone &mdash; for personal information. There is no
+            chat, no messaging, no comments and no user-to-user contact of any kind.
+        </li>
+        <li>
+            <strong>No advertising and no profiling.</strong> The App shows no ads. It does not collect the
+            Android Advertising ID (the permission is stripped from the App and Analytics ad-id collection
+            is switched off in code), and no one's data &mdash; child or adult &mdash; is used for
+            behavioural advertising, ad targeting, profiling or marketing. Any notification we send is a
+            reminder about the App itself, never an advertisement.
+        </li>
+        <li>
+            <strong>Identifiers are used only for internal operations.</strong> The hashed device id,
+            anonymous app-user id and IP address described in Section 1, and the app-instance identifier
+            used by Firebase Analytics and Crashlytics described in Section 3, are persistent identifiers
+            used solely in support of the App's internal operations: enforcing the free-scan quota,
+            verifying a subscription, preventing abuse, keeping the App working and diagnosing crashes.
+            They are never used to contact a user, to build a profile, or for any advertising purpose.
+        </li>
+        <li>
+            <strong>Photos are not kept by us.</strong> The photo chosen for a scan is processed to return
+            an identification and is not stored on our servers. Anything saved to the Collection is written
+            to the device and stays there.
+        </li>
+        <li>
+            <strong>Purchases go through Google Play.</strong> Watch Identifier Pro is sold entirely through
+            Google Play, where a parent or guardian can require authentication for every purchase and can
+            apply Google Play's parental controls. We never see or store payment details.
+        </li>
+    </ul>
+    <p>
+        We handle information collected from children in line with the U.S. Children's Online Privacy
+        Protection Act (COPPA), the Google Play Families policy, and the child-specific provisions of the
+        GDPR (including Article 8) and comparable laws elsewhere. Parents and guardians have the rights set
+        out in Section 7 &mdash; to review the information collected from their child, to refuse further
+        collection, and to have it deleted. Contact us at the email in Section 11 and we will act on the
+        request. If you believe a child has somehow provided personal information to us beyond what is
+        described in this policy, please tell us and we will delete it.
     </p>
 
     <h2>9. Security</h2>
