@@ -44,7 +44,7 @@
 
 <div class="container">
     <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> September 7, 2026</p>
+    <p><strong>Effective Date:</strong> September 11, 2026</p>
 
     <p>
         Thank you for using <strong>Gable</strong>. We respect your privacy and are committed to protecting
@@ -86,9 +86,14 @@
     <h2>2. Permissions</h2>
     <p>
         Gable requests notification permission so it can remind you before a maintenance window closes.
-        Reminders are generated and scheduled entirely on your device; they are not push messages, and no
-        server is involved in sending them. You can decline the permission or turn reminders off later, and
-        the rest of the app continues to work.
+        Reminders about your plan are generated and scheduled entirely on your device from the plan stored
+        there. Separately, Gable can receive occasional messages sent through Firebase Cloud Messaging and
+        Firebase In-App Messaging (Google) &mdash; for example that a new season has started or that a free
+        trial is about to end. Those messages are written by us and sent from Google's servers; none of them
+        carries your home profile, your task history, your notes, your costs or your photos, which stay on
+        your device. Messages from Gable arrive on their own notification channel, "From Gable", which you
+        can mute in Android's settings without muting your reminders. You can decline the permission or turn
+        reminders off later, and the rest of the app continues to work.
     </p>
     <p>
         When you attach a photo to a completed task, Gable uses the Android photo picker. The picker hands
@@ -131,6 +136,23 @@
             <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>
         </li>
         <li>
+            <strong>Firebase Cloud Messaging (Google):</strong> delivers the occasional messages described in
+            Section 2. To do so, Google generates a registration token and a Firebase installation
+            identifier on your device and records the app's version. Gable does not store the token
+            anywhere, does not send messages to individual devices, and never includes your content in a
+            message.
+            <br>
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>
+        </li>
+        <li>
+            <strong>Firebase In-App Messaging (Google):</strong> shows a message inside the app on some
+            occasions (for example after a free trial ends) and records whether that message was shown,
+            tapped or dismissed, associated with the same device/app-instance identifier as Firebase
+            Analytics. It does not receive your content.
+            <br>
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>
+        </li>
+        <li>
             <strong>RevenueCat:</strong> if you subscribe to Gable Pro, RevenueCat processes your purchase
             and entitlement status (e.g. whether Pro is active) so the app can unlock it, and generates an
             anonymous app-user id for that purpose. RevenueCat does not receive your home profile, your
@@ -147,7 +169,8 @@
         </li>
     </ul>
     <p>
-        Google (for Firebase Analytics, Crashlytics and Remote Config) and RevenueCat each act as
+        Google (for Firebase Analytics, Crashlytics, Remote Config, Cloud Messaging and In-App Messaging)
+        and RevenueCat each act as
         independent data processors under their own standard Data Processing Agreements, which apply
         automatically to all customers using their services &mdash; we do not need a separately negotiated
         DPA with either of them.
@@ -163,7 +186,9 @@
             process your Pro subscription and grant the corresponding entitlement;</li>
         <li><strong>Legitimate interests</strong> &mdash; for Firebase Analytics, Crashlytics and Remote
             Config, to understand app usage, diagnose crashes and keep the app configurable so we can
-            maintain and improve it.</li>
+            maintain and improve it; and for Firebase Cloud Messaging and In-App Messaging, to tell you
+            about the app itself (a new season, a trial ending) &mdash; you can mute or decline these at
+            any time.</li>
     </ul>
     <p>
         We do not rely on consent as the legal basis for analytics or crash reporting; where local law
@@ -190,6 +215,9 @@
         <li><strong>Firebase Analytics:</strong> event and user-level data is retained for 14 months from
             collection, matching Firebase's default retention setting;</li>
         <li><strong>Firebase Crashlytics:</strong> crash reports are retained for 90 days;</li>
+        <li><strong>Firebase Cloud Messaging and In-App Messaging:</strong> the registration token and
+            installation identifier exist for as long as the app is installed and are invalidated when it
+            is uninstalled; message impression data follows the Firebase Analytics retention above;</li>
         <li><strong>RevenueCat / purchase records:</strong> your entitlement status is retained for as long
             as you have the app installed and, after that, for up to 7 years to satisfy standard financial
             and tax record-keeping obligations.</li>
@@ -263,7 +291,8 @@
         <li>
             The app shows no advertising. It does not collect the Android Advertising ID, and no one's data
             is used for behavioural advertising, ad targeting or profiling. Every notification the app
-            sends is a maintenance reminder generated on your own device, never an advertisement.
+            shows is either a maintenance reminder generated on your own device or a message from us about
+            the app itself, never an advertisement and never containing personal data.
         </li>
         <li>
             The only identifiers involved are the device/app-instance identifier used by Firebase and the
